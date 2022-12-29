@@ -1,0 +1,24 @@
+<!-- Modal -->
+<div  class="tab-pane fade" id="add-role" role="tabpanel" aria-labelledby="profile-tab">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+      
+        <div class="modal-body">
+            <form action="/admin/role" method="POST" 
+       
+            >
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Role Name </label>
+                  <input type="text" class="form-control" id="name" name="name"  placeholder="Enter Name of User" required="true">
+                </div>
+               
+    
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,47 @@
+[
+    {
+      "title": "Just Report ",
+      "description": "a Report ",
+      "shift": "Night  ",
+      "tanggal": "221022  ",
+      "image": [
+        {
+          "imageUrl": "images/1666449548633.jpg"
+        },
+        {
+          "imageUrl": "images/1666449548633.jpg"
+        },
+        {
+          "imageUrl": "images/1666449548633.jpg"
+        }
+      ],
+      "workerHours": [
+        {
+          "working_name": "Blasting",
+          "length": 8
+        }
+      ],
+      "worker": [
+        {
+
+          "type_of_work": "Leader",
+          "qtyW": 1
+        }
+      ],
+      "weather": [
+        {
+
+          "weather": "Rainy"
+        }
+      ],
+      "equipment": [
+        {
+
+          "name": "Pompa",
+          "qty": 25
+     
+        }
+      ]
+    }
+    
+  ]

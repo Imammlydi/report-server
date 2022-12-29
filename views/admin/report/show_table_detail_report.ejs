@@ -1,0 +1,75 @@
+
+    <div class="card shadow mb-4 mt-2">
+        <div class="card-header py-3">
+            <a href="/admin/booking" class="btn btn-warning"> Back</a>
+          </div>
+       
+    
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">  
+              <div class="d-flex flex-wrap overflow-auto">
+                <% for(let i=0; i < report.length; i++){ %>
+                <% for(let x = 0; x < report[i].image.length; x++){ %> 
+                <div class=" mt-2 ml-2 shadow  card bg-white rounded" style="width: 10rem;">
+                    <img src="http://localhost:5000/<%= report[i].image[x].imageUrl %>" alt="image" class="card-img-top" >        
+                </div>
+                <% } %>
+                <% } %>
+              </div>
+              
+            </div>
+            <div class="col-md-6">
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>Nomer</th>
+                        <th>Image</th>
+                        <th>pacaneka</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <% for(let i=0; i < report.length; i++){ %>
+                     <tr>
+                      <td><%= i+1  %></td>
+                      
+                      <td>
+                        <% for(let x = 0; x < report[i].image.length; x++){ %>
+
+                          <img src="http://localhost:5000/<%= report[i].image[x].imageUrl %>" alt="image" style="width : 30%; display:flex; flex-wrap: nowrap;" >
+                          <p><%= report[i].image[x].id %></p>
+                        <% } %>
+                      </td>
+                      <td>
+                  
+                      </td>
+                   
+                      <td>
+                        <form action="/admin/userreport/<%= report[i].id  %>?_method=DELETE" method="POST">
+                          <a 
+                            href="javascript:void()" 
+                            type="button" 
+                            class="btn btn-warning btn-circle btn-sm button-update" 
+                            data-id="<%= report[i].id %>" 
+                            data-report="<%= report[i].id %>"
+                          
+                            >
+                           
+                              <i class="fas fa-edit"></i></a>
+                              
+                          <button type="submit" class="btn btn-danger btn-circle btn-sm "><i class="fas fa-trash"></i></button>
+                        </form>
+
+                     </tr>
+                     <%  } %> 
+                    </tbody>
+                    
+                  </table>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  

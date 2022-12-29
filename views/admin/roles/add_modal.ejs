@@ -1,0 +1,54 @@
+<!-- Modal -->
+<div  class="tab-pane fade" id="add-item" role="tabpanel" aria-labelledby="profile-tab">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        
+        <div class="modal-body">
+            <form action="/admin/role" method="POST" 
+       
+            >
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Name </label>
+                  <input type="text" class="form-control" id="name" name="name"  placeholder="Enter Name of User" required="true">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="text" class="form-control" id="email" name="email"  placeholder="Enter Nomer email" required="true">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Password</label>
+                  <input type="text" class="form-control" id="password" name="password"  placeholder="password" required="true">
+                </div>
+               
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Pilih user</label>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" class="form-control"  id="userId" name="userId">
+                  <!-- <option selected>Pilih user</option> -->
+                  <% for(let i=0; i < users.length; i++){ %>
+                  <option value="<%= users[i].id %>"><%= users[i].name %></option>
+                  <%  } %>  
+                </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Pilih Role</label>
+                <select class="form-select form-select-sm" aria-label=".form-select-sm example" class="form-control"  id="roleId" name="roleId">
+                  <!-- <option selected>Pilih Role</option> -->
+                  <% for(let i=0; i < role.length; i++){ %>
+                  <option value="<%= role[i].id %>"><%= role[i].role %></option>
+                  <%  } %>  
+                </select>
+                </div>
+               
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Image</label>
+                  <input type="file" class="form-control"    >
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+              </form>
+        </div>
+      </div>
+    </div>
+  </div>
